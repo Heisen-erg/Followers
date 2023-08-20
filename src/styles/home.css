@@ -1,0 +1,45 @@
+@media screen and (max-width:1000px){
+
+   .row  .custom{
+        height: 45vh;
+    }
+   .row .custom .image{
+  width: 50vw;
+  
+    }
+
+
+}
+
+
+
+
+body{
+    overflow-x: hidden;
+   
+}
+
+.custom{
+    background: linear-gradient(to bottom,rgb(160, 182, 158,0.5),rgb(165, 146, 146));
+
+    height: 70vh;
+    border-top: 5px solid rgba(169, 181, 131, 0.918);
+    
+}
+
+.image{
+    width: 22vw;
+    place-self: center;
+    border-radius: 20px;
+    box-shadow: 2px 2px 3px rgb(250, 251, 251);
+    transition: 0.3s;
+}
+.image:hover{
+    scale: 1.03;
+}
+.text{
+    text-align: center;
+    place-self: center;
+    margin-right: 1.5vmax;
+    font-family: verdana;
+}
