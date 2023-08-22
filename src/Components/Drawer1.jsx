@@ -27,7 +27,7 @@ import {
       transition={{duration:1.5}}
       
     > <Button ref={btnRef} color={'black.900'} marginLeft={1} marginTop={1} w={'3vw'} h={'5vh'} onClick={onOpen}>
-        <i class="bi bi-gear-fill"></i>
+        <i class="bi bi-list"></i>
         </Button> </motion.div>
         <Drawer
           isOpen={isOpen}
