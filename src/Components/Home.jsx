@@ -1,11 +1,17 @@
-import React from 'react'
+
 import "../styles/home.css"
 import Typewriter from 'typewriter-effect'
 import Countup from "react-countup"
 import { motion } from "framer-motion"
 
+
 const Home = () => {
+
+
+  
   return (
+
+    <>
     <div className="container-fluid">
       <div className="row">
 
@@ -19,6 +25,7 @@ const Home = () => {
 
       </div>
     </div>
+    </>
   )
 }
 

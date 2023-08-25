@@ -10,7 +10,7 @@ root.render(
   <ColorModeProvider>
   <React.StrictMode>
     <App />
-  </React.StrictMode>
+    </React.StrictMode>
   </ColorModeProvider>
   
   </ChakraProvider>

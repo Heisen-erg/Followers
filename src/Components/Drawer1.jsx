@@ -24,7 +24,7 @@ import {
       <motion.div
       initial={{ opacity: 0 ,x:-100 }}
       animate={{ opacity: 1, x:0}}
-      transition={{duration:1.5}}
+      transition={{duration:1}}
       
     > <Button ref={btnRef} color={'black.900'} marginLeft={1} marginTop={1} w={'3vw'} h={'5vh'} onClick={onOpen}>
         <i className="bi bi-list"></i>

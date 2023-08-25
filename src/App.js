@@ -5,10 +5,28 @@ import Contact from "./Components/Contact";
 import Home from "./Components/Home";
 import Register from "./Components/Register";
 import Footer from "./Components/Footer";
+import { useEffect , useState } from "react";
 
 
 function App() {
-  return (<>
+
+  const [ Loading , setLoading ] = useState(true)
+   
+  useEffect(()=>{
+
+  setTimeout(()=>{setLoading(false)},3000)
+
+ },[])
+
+
+
+
+  return (
+
+    Loading ? <Contact/> :
+  
+  
+  <>
 
     <Router>
       <Drawer1 />
