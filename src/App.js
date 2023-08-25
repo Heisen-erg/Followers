@@ -3,6 +3,8 @@ import Drawer1 from "./Components/Drawer1"
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
 import Contact from "./Components/Contact";
 import Home from "./Components/Home";
+import Register from "./Components/Register";
+
 
 function App() {
   return (<>
@@ -13,6 +15,7 @@ function App() {
       <Routes>
       <Route path="/" element={<Home />} />
         <Route path="/Contact" element={<Contact />} />
+        <Route path="/register" element={<Register />} />
       </Routes>
      
     </Router>
