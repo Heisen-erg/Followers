@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
 import Contact from "./Components/Contact";
 import Home from "./Components/Home";
 import Register from "./Components/Register";
+import Footer from "./Components/Footer";
 
 
 function App() {
@@ -17,7 +18,7 @@ function App() {
         <Route path="/Contact" element={<Contact />} />
         <Route path="/register" element={<Register />} />
       </Routes>
-     
+     <Footer/>
     </Router>
 
   </>
