@@ -1,11 +1,16 @@
+import React from "react"
+
 import Drawer1 from "./Components/Drawer1"
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
 import Contact from "./Components/Contact";
-import Home from "./Components/Home";
-import Register from "./Components/Register";
+
+
 import Footer from "./Components/Footer";
-import { useEffect , useState } from "react";
+import { Suspense, useEffect , useState } from "react";
+const Home = React.lazy(()=> import("./Components/Home"));
+const Register = React.lazy(()=> import("./Components/Register"));
+
 
 
 function App() {
@@ -32,9 +37,11 @@ function App() {
       <Drawer1 />
       
       <Routes>
-      <Route path="/" element={<Home />} />
-        <Route path="/Contact" element={<Contact />} />
-        <Route path="/register" element={<Register />} />
+        
+      <Route path="/" element={ <Suspense fallback={<Contact/>}><Home /> </Suspense>} />
+      
+        <Route path="/Contact" element={<Suspense fallback={<Contact/>}><Contact /></Suspense>} />
+        <Route path="/register" element={<Suspense fallback={<Contact/>}><Register /></Suspense>} />
       </Routes>
      <Footer/>
     </Router>
