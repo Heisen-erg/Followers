@@ -43,11 +43,12 @@ import {
             <Tabs variant={'unstyled'} >
   <TabList   flexDirection={'column'} rowGap={'2'}>
    <Tab> <Link to='/'>  <Tab marginTop={'5vh'} _hover={{boxShadow:' inset 1px 1px 1px white'}} w={'300px'} ><div> <i className="bi bi-house-door"> </i>  <p>HOME</p> </div>    </Tab></Link></Tab>
-   <Tab> <Link to="/Contact"  >  <Tab marginTop={'1.5vh'} _hover={{boxShadow:' inset 1px 1px 1px white'}} w={'300px'} > <div>  <i className="bi bi-person-lines-fill"></i> <p>CONTACT</p> </div>  </Tab>   </Link></Tab>
-   <Tab> <Link to='/pricing'> <Tab marginTop={'1.5vh'} _hover={{boxShadow:' inset 1px 1px 1px white'}} w={'300px'} > <div> <i className="bi bi-currency-rupee"></i> <p>PRICING</p >  </div></Tab> </Link></Tab>
-   <Tab  marginTop={'1.5vh'} onClick={toggleColorMode} _hover={{boxShadow:' inset 1px 1px 1px white'}} > <Link><i className="bi bi-moon"  p-4 ></i> <p>DARK MODE</p> </Link>  </Tab>
-    <Tab> <Link to="/register"> <Tab marginTop={'1.5vh'} _hover={{boxShadow:' inset 1px 1px 1px white'}} w={'300px'}  > <div> <i className="bi bi-envelope"></i> <p>REGISTER</p> </div>  </Tab></Link> </Tab>
-    <Tab marginTop={'1.5vh'}  marginBottom={'30vh'} _hover={{boxShadow:' inset 1px 1px 1px white'}} >  <Link><i className="bi bi-box-arrow-right"></i> <p>LOGIN</p></Link>  </Tab>
+   <Tab> <Link to="/Contact"  >  <Tab marginTop={'.5vh'} _hover={{boxShadow:' inset 1px 1px 1px white'}} w={'300px'} > <div>  <i className="bi bi-person-lines-fill"></i> <p>CONTACT</p> </div>  </Tab>   </Link></Tab>
+   <Tab> <Link to='/pricing'> <Tab marginTop={'.5vh'} _hover={{boxShadow:' inset 1px 1px 1px white'}} w={'300px'} > <div> <i className="bi bi-currency-rupee"></i> <p>PRICING</p >  </div></Tab> </Link></Tab>
+   <Tab  marginTop={'.5vh'} onClick={toggleColorMode} _hover={{boxShadow:' inset 1px 1px 1px white'}} > <Link><i className="bi bi-moon"  p-4 ></i> <p>DARK MODE</p> </Link>  </Tab>
+    <Tab> <Link to="/register"> <Tab marginTop={'.5vh'} _hover={{boxShadow:' inset 1px 1px 1px white'}} w={'300px'}  > <div> <i className="bi bi-envelope"></i> <p>REGISTER</p> </div>  </Tab></Link> </Tab>
+    <Tab marginTop={'.5vh'}   _hover={{boxShadow:' inset 1px 1px 1px white'}} >  <Link><i className="bi bi-box-arrow-right"></i> <p>LOGIN</p></Link>  </Tab>
+    <Tab> <Link to="/admin"> <Tab marginTop={'.5vh'} _hover={{boxShadow:' inset 1px 1px 1px white'}} w={'300px'}  > <div> <i className="bi bi-envelope"></i> <p>ADMIN</p> </div>  </Tab></Link> </Tab>
   </TabList>
   </Tabs>
   
