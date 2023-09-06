@@ -8,7 +8,7 @@ import Adminpass from "./Components/Adminpass"
 
 import Footer from "./Components/Footer";
 import { Suspense, useEffect , useState } from "react";
-
+ 
 const Home = React.lazy(()=> import("./Components/Home"));
 const Register = React.lazy(()=> import("./Components/Register"));
 
