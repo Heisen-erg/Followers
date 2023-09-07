@@ -32,6 +32,9 @@ const[buttonloader2,setbuttonloader2]=useState(false)
 
 const HandleSubmit = async (e)=>{
   e.preventDefault()
+ 
+  if( !user.planname || !user.plandescription ||  !user.planprice ){return toast({title:"All Details Must Be Filled",status:'error'})}
+else{
   setbuttonloader(true)
 await axios.post("https://rishi-server.vercel.app/plans/addplans",user).then((response)=>{
   toast({
@@ -45,7 +48,7 @@ await axios.post("https://rishi-server.vercel.app/plans/addplans",user).then((re
       document.getElementById('Value1').value = ""
       document.getElementById('Value2').value = ""
       document.getElementById('Value3').value = ""
-    })
+    })}
     setbuttonloader(false)
   
 }
