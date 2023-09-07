@@ -45,9 +45,9 @@ await axios.post("https://rishi-server.vercel.app/plans/addplans",user).then((re
       document.getElementById('Value1').value = ""
       document.getElementById('Value2').value = ""
       document.getElementById('Value3').value = ""
-      setbuttonloader(false)
-})
-
+    })
+    setbuttonloader(false)
+  
 }
 
 const HandleSubmit2 = async (e)=>{
@@ -58,7 +58,7 @@ const HandleSubmit2 = async (e)=>{
       isClosable: true,
       position:'top'})
       document.getElementById('Value4').value = ""
-      setbuttonloader2(false)
+     
 //  if(response.data.message=="Success"){ toast({
 //    title:"Successfully Deleted The Plan",
 //     description: response.data.message,
@@ -78,7 +78,7 @@ const HandleSubmit2 = async (e)=>{
 
 //   }
  })
- 
+ setbuttonloader2(false)
 
   }
 
