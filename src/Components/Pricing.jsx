@@ -2,10 +2,12 @@ import React, { useEffect, useState } from 'react'
 import "../styles/pricing.css"
 import Element from './Element'
 import Contact from "../Components/Contact"
+import Smallloader from "../Components/Smallloader"
 import axios from "axios"
 const Pricing = () => {
 const[loader,setloader]=useState(true)
 const[pl,shpl]=useState([])
+
 useEffect(() => {
    axios.get("https://rishi-server.vercel.app/plans/showplans").then((response)=>{shpl(response.data.allplans)
   setloader(false)})
@@ -32,7 +34,7 @@ useEffect(() => {
  
 
     </table>
-    { loader? <Contact/> : pl.map((from)=>{ return(<Element  planname={from.planname}  plandescription={from.plandescription} planprice={from.planprice}  />)}) }
+    { loader? <Smallloader/> : pl.map((from)=>{ return(<Element  planname={from.planname}  plandescription={from.plandescription} planprice={from.planprice}  />)}) }
     </div>
   )
 }
