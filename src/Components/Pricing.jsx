@@ -29,9 +29,10 @@ useEffect(() => {
   <th style={{width:'50vw'}} className='text-center'>DESCRIPTION</th>
   <th style={{width:'25vw'}}  className='text-center'>PRICE</th>
 </tr>
- { loader? <Contact/> : pl.map((from)=>{ return(<Element  planname={from.planname}  plandescription={from.plandescription} planprice={from.planprice}  />)}) }
+ 
 
     </table>
+    { loader? <Contact/> : pl.map((from)=>{ return(<Element  planname={from.planname}  plandescription={from.plandescription} planprice={from.planprice}  />)}) }
     </div>
   )
 }
