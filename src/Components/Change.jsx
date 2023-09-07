@@ -18,7 +18,8 @@ useEffect(() => {
     ({data})=>{
     console.log(data)
       setuserdata(data.allusers) 
-      setloader(false)}
+      // setloader(false)
+    }
   )
   
 
