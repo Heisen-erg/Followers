@@ -11,7 +11,8 @@ const[user,setuser]=useState({})
 const[user2,setuser2]=useState()
 // const[loader,setloader]=useState(true)
 const[userdata,setuserdata]=useState({})
-
+const[buttonloader,setbuttonloader]=useState(false)
+const[buttonloader2,setbuttonloader2]=useState(false)
 
 // useEffect(() => {
 //   axios.get("https://rishi-server.vercel.app/user/getallusers").then(
@@ -31,6 +32,7 @@ const[userdata,setuserdata]=useState({})
 
 const HandleSubmit = async (e)=>{
   e.preventDefault()
+  setbuttonloader(true)
 await axios.post("https://rishi-server.vercel.app/plans/addplans",user).then((response)=>{
   toast({
        title:"Successfully Added The Plan",
@@ -43,18 +45,20 @@ await axios.post("https://rishi-server.vercel.app/plans/addplans",user).then((re
       document.getElementById('Value1').value = ""
       document.getElementById('Value2').value = ""
       document.getElementById('Value3').value = ""
+      setbuttonloader(false)
 })
 
 }
 
 const HandleSubmit2 = async (e)=>{
   e.preventDefault()
-  
+  setbuttonloader2(true)
    await axios.delete(`https://rishi-server.vercel.app/plans/removeplans?drop=${user2}`).then((response)=>{ toast({title:'Changes Will Take Place In 5 Seconds' , description:response.data.message, status: 'success',
      duration: 2000,
       isClosable: true,
       position:'top'})
       document.getElementById('Value4').value = ""
+      setbuttonloader(false)
 //  if(response.data.message=="Success"){ toast({
 //    title:"Successfully Deleted The Plan",
 //     description: response.data.message,
@@ -97,7 +101,7 @@ const HandleSubmit2 = async (e)=>{
             <h6 className='mt-3 ' >PLAN-PRICE</h6>
             <input type="text" id='Value3' style={{ color: 'black', width: '70%', border: '1px solid blue', borderRadius: '5px', backgroundColor: 'rgb(200,200,200.5)',height:'50px' }} onChange={(e)=>{setuser({...user,planprice:e.target.value})}} />
         
-            <button className='mt-3  butt ' >SUBMIT</button>
+            <button className='mt-3  butt ' disabled={buttonloader} > { buttonloader? <h6 style={{marginTop:'3px'}}>Processing... </h6 >: <h6 style={{marginTop:'3px'}}>SUBMIT </h6> }</button>
           </form></div>
 
       </div>
@@ -109,8 +113,8 @@ const HandleSubmit2 = async (e)=>{
             <h6 className='mt-5 ' >PLAN-NAME</h6>
             <input type="text" id='Value4' style={{ color: 'black', width: '70%', border: '1px solid blue', borderRadius: '5px', backgroundColor: 'rgb(200,200,200.5)',height:'50px' }} onChange={(e)=>{setuser2(e.target.value)} }/>
            
-            
-            <button className='mt-5  butt ' >SUBMIT</button>
+            <button className='mt-3  butt ' disabled={buttonloader2} > { buttonloader2? <h6 style={{marginTop:'3px'}}>Processing... </h6 >: <h6 style={{marginTop:'3px'}}>SUBMIT </h6> }</button>
+           
           </form></div>
 
       </div>
