@@ -21,11 +21,12 @@
     border-radius: 5px;
     height: 5vh;
     width: 15vw;
+    min-width:80px;
     background-color: rgb(62, 58, 55);
     font-size: 12px;
     color: antiquewhite;
     align-self: center;
-    margin-left: 39%;
+    margin-left: 37%;
 }
 
 
