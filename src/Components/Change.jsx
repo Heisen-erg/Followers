@@ -13,20 +13,20 @@ const[user2,setuser2]=useState()
 const[userdata,setuserdata]=useState({})
 
 
-useEffect(() => {
-  axios.get("https://rishi-server.vercel.app/user/getallusers").then(
-    ({data})=>{
-    console.log(data)
-      setuserdata(data.allusers) 
-      // setloader(false)
-    }
-  )
+// useEffect(() => {
+//   axios.get("https://rishi-server.vercel.app/user/getallusers").then(
+//     ({data})=>{
+//     console.log(data)
+//       setuserdata(data.allusers) 
+//       // setloader(false)
+//     }
+//   )
   
 
-  return () => {
+//   return () => {
    
-  }
-}, [])
+//   }
+// }, [])
 
 const HandleSubmit = async (e)=>{
   e.preventDefault()
