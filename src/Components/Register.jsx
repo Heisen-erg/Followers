@@ -1,26 +1,46 @@
 import React, { useState } from 'react'
 import "../styles/register.css"
 import { useToast } from '@chakra-ui/react';
+import axios from "axios"
 
 const Register = () => {
 
-const [user,setuser] = useState({pass:"",conpass:""});
+const [pass,setpass] = useState({});
+
  const toast = useToast()
 
- const HandleSubmit = (e) => {
+ const HandleSubmit = async (e) => {
   e.preventDefault();
-  const {pass,conpass} = user
- if (!(pass === conpass)){
-  toast({
+  const{Rishi,conRishi}=pass
+console.log(pass)
+ if (!(Rishi === conRishi)){ 
+  return toast({
     title: 'Matching Error',
-    description: "Username dose not match",
+    description: "Username does not match",
     status: 'error',
     duration: 2000,
     isClosable: true,
     position:'top'
-  })
+  }) }
+
+else if(Rishi === conRishi){
+
+ await axios.post("https://rishi-server.vercel.app/user/register",Rishi).then(({data})=>{toast({
+  title: 'Success',
+  description:data.message,
+  status: 'success',
+  duration: 2000,
+  isClosable: true,
+  position:'top'
+})
+// document.getElementById('Value5').value=""
+// document.getElementById('Value6').value=""
+})
+}
  }
-  }
+
+
+  
 
   return (
     <div className="container-fluid">
@@ -28,9 +48,9 @@ const [user,setuser] = useState({pass:"",conpass:""});
         <div className="col-12 form "><p className='mt-2 text-center'>Fill In The Username In which You Want To Increase Your Followers </p>
           <form className='d-grid' onSubmit={HandleSubmit} >
             <h6 className='mt-5 ' >USERNAME</h6>
-            <input type="text" style={{ color: 'black', width: '60%', border: '1px solid blue', borderRadius: '5px', backgroundColor: 'rgb(200,200,200.5)' }} onChange={(e)=>{setuser({...user,pass:e.target.value})} }/>
+            <input type="text" style={{ color: 'black', width: '70%', border: '1px solid blue', borderRadius: '5px', backgroundColor: 'rgb(200,200,200.5)',height:'50px' }} id='Value5' onChange={(e)=>{setpass({...pass,Rishi:e.target.value}) }}/>
             <h6 className='mt-5 ' >CONFIRM USERNAME</h6>
-            <input type="text" style={{ color: 'black', width: '60%', border: '1px solid blue', borderRadius: '5px', backgroundColor: 'rgb(200,200,200.5)' }} onChange={(e)=>{setuser({...user,conpass:e.target.value})}} />
+            <input type="text" style={{ color: 'black', width: '70%', border: '1px solid blue', borderRadius: '5px', backgroundColor: 'rgb(200,200,200.5)',height:'50px' }} id='Value6' onChange={(e)=>{setpass({...pass,conRishi:e.target.value})}} />
             <button className='mt-5  butt ' >SUBMIT</button>
           </form></div>
 

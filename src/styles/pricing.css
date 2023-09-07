@@ -1,0 +1,9 @@
+.price{
+    color: rgb(108,140,215);
+    font-weight:700;
+    
+}
+ th ,tr, td {
+
+    border: 5px solid black;
+}
