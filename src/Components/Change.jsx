@@ -28,6 +28,7 @@ const[userdata,setuserdata]=useState({})
 //   }
 // }, [])
 
+
 const HandleSubmit = async (e)=>{
   e.preventDefault()
 await axios.post("https://rishi-server.vercel.app/plans/addplans",user).then((response)=>{
