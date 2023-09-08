@@ -26,7 +26,7 @@ const [pass,setpass] = useState({});
 // else if(Rishi === conRishi){
   
   // https://rishi-server.vercel.app/user/register
-  try{
+ 
   axios.post("https://rishi-server.vercel.app/plans/register",pass,{headers:{
   "Content-Type":'application/json'
 }}).then(({data})=>{toast({
@@ -40,9 +40,7 @@ const [pass,setpass] = useState({});
 // document.getElementById('Value5').value=""
 // document.getElementById('Value6').value=""
 })
- }
- catch (error) {
-  console.log(error);}
+
 // }
  }
 
