@@ -28,7 +28,19 @@ const [pass,setpass] = useState({});
   // https://rishi-server.vercel.app/user/register
  console.log("ho rha h")
 
- await axios1.post("https://rishi-server.vercel.app/registering",pass).then(({data})=>{toast({
+ await fetch("https://rishi-server.vercel.app/registering",
+ {
+     method: "POST",
+ 
+     // whatever data you want to post with a key-value pair
+ 
+     pass,
+     headers: 
+     {
+         "Content-Type": "application/json"
+     }
+ 
+ }).then(({data})=>{toast({
   title: 'Success',
   description:data.message,
   status: 'success',
