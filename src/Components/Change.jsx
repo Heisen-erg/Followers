@@ -36,19 +36,9 @@ const HandleSubmit = async (e)=>{
   if( !user.planname || !user.plandescription ||  !user.planprice ){return toast({title:"All Details Must Be Filled",status:'error',position:"top"})}
 else{
   setbuttonloader(true)
-await axios.post("https://rishi-server.vercel.app/plans/addplans",user).then((response)=>{ 
-  toast({
-       title:"Successfully Added The Plan",
-        description: response.data.message,
-        status: 'success',
-        duration: 2000,
-        isClosable: true,
-        position:'top'
-      })
-      // document.getElementById('Value1').value = ""
-      // document.getElementById('Value2').value = ""
-      // document.getElementById('Value3').value = ""
-      setbuttonloader(false)
+await axios.post("https://rishi-server.vercel.app/plans/addplans",user).then((response)=>{ setbuttonloader(false)
+ return  toast({title:"Successfully Added The Plan", description: response.data.message,status: 'success',duration: 2000, isClosable: true,position:'top'}) ;   
+     
     })}
     
   
@@ -57,11 +47,12 @@ await axios.post("https://rishi-server.vercel.app/plans/addplans",user).then((re
 const HandleSubmit2 = async (e)=>{
   e.preventDefault()
   setbuttonloader2(true)
-   await axios.delete(`https://rishi-server.vercel.app/plans/removeplans?drop=${user2}`).then((response)=>{ toast({title:'Changes Will Take Effect In 5 Seconds' , description:response.data.message, status: 'success',
+   await axios.delete(`https://rishi-server.vercel.app/plans/removeplans?drop=${user2}`).then((response)=>{  setbuttonloader2(false) 
+   return toast({title:'Changes Will Take Effect In 5 Seconds' , description:response.data.message, status: 'success',
      duration: 2000,
       isClosable: true,
       position:'top'})
-      document.getElementById('Value4').value = ""  
+    
      
 //  if(response.data.message=="Success"){ toast({
 //    title:"Successfully Deleted The Plan",
@@ -82,7 +73,7 @@ const HandleSubmit2 = async (e)=>{
 
 //   }
  })
- setbuttonloader2(false)
+
 
   }
 
