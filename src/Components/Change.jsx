@@ -60,7 +60,7 @@ const HandleSubmit2 = async (e)=>{
      duration: 2000,
       isClosable: true,
       position:'top'})
-      document.getElementById('Value4').value = ""
+      document.getElementById('Value4').value = ""  
      
 //  if(response.data.message=="Success"){ toast({
 //    title:"Successfully Deleted The Plan",
@@ -89,7 +89,7 @@ const HandleSubmit2 = async (e)=>{
 
 
 
-  return ( <> <div style={{height:'10vh',marginTop:'5vh'}}>
+  return ( buttonloader?  ( <Contact/>) :  <> <div style={{height:'10vh',marginTop:'5vh'}}>
 <h1 style={{fontFamily:'dancing',fontSize:'35px',color:'grey'}} className='text-center'>WELCOME ADMIN RISHI SHUKLA !</h1>
 </div>
 
@@ -104,7 +104,9 @@ const HandleSubmit2 = async (e)=>{
             <h6 className='mt-3 ' >PLAN-PRICE</h6>
             <input type="text" id='Value3' style={{ color: 'black', width: '70%', border: '1px solid blue', borderRadius: '5px', backgroundColor: 'rgb(200,200,200.5)',height:'50px' }} onChange={(e)=>{setuser({...user,planprice:e.target.value})}} />
         
-            <button className='mt-3  butt ' disabled={buttonloader} > { buttonloader? <h8 style={{marginTop:'3px'}}>Processing... </h8 >: <h6 style={{marginTop:'3px'}}>SUBMIT </h6> }</button>
+            {/* { buttonloader?  <button className='mt-3  butt ' disabled={buttonloader} >PROCESSING... </button> :  <button className='mt-3  butt ' disabled={buttonloader} >SUBMIT </button> } */}
+            <button className='mt-3  butt '>SUBMIT </button>
+         
           </form></div>
 
       </div>
@@ -116,8 +118,16 @@ const HandleSubmit2 = async (e)=>{
             <h6 className='mt-5 ' >PLAN-NAME</h6>
             <input type="text" id='Value4' style={{ color: 'black', width: '70%', border: '1px solid blue', borderRadius: '5px', backgroundColor: 'rgb(200,200,200.5)',height:'50px' }} onChange={(e)=>{setuser2(e.target.value)} }/>
            
-            <button className='mt-3  butt ' disabled={buttonloader2} > { buttonloader2? <h8 style={{marginTop:'3px'}}>Processing... </h8 >: <h6 style={{marginTop:'3px'}}>SUBMIT </h6> }</button>
-           
+            {/* { buttonloader?    <> <div className=' d-grid  container-fluid ' style={{
+    height: '100vh',
+    width: '100vw',
+    backgroundcolor: 'rgb(255,255,255,0.5',
+    zIndex:'5'
+}}>
+   <div className='loader'><img className=' img' src={require("../assets/loader.png")} alt="" /></div> 
+    </div>
+    </> :  <button className='mt-3  butt ' disabled={buttonloader} >SUBMIT </button> } */}
+    <button className='mt-3  butt '>SUBMIT </button>      
           </form></div>
 
       </div>
@@ -130,7 +140,7 @@ const HandleSubmit2 = async (e)=>{
 
        
 
-</>)
+</> )
 }
 
 export default Change
