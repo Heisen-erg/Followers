@@ -27,7 +27,7 @@ const [pass,setpass] = useState({});
   
   // https://rishi-server.vercel.app/user/register
  console.log("ho rha h")
- await axios.post("https://rishi-server.vercel.app/plans/registering",pass
+ await axios.post("https://rishi-server.vercel.app/registering",pass
 ).then(({data})=>{toast({
   title: 'Success',
   description:data.message,
