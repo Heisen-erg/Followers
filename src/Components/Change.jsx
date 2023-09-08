@@ -12,7 +12,7 @@ const[user2,setuser2]=useState()
 // const[loader,setloader]=useState(true)
 const[userdata,setuserdata]=useState({})
 const[buttonloader,setbuttonloader]=useState(false)
-const[buttonloader2,setbuttonloader2]=useState(false)
+
 
 // useEffect(() => {
 //   axios.get("https://rishi-server.vercel.app/user/getallusers").then(
@@ -56,10 +56,10 @@ setbuttonloader(false)
 
 const HandleSubmit2 = async (e)=>{
   e.preventDefault()
-  setbuttonloader2(true)
+  setbuttonloader(true)
    await axios.delete(`https://rishi-server.vercel.app/plans/removeplans?drop=${user2}`).then((response)=>{  
    
-   setbuttonloader2(false) 
+   setbuttonloader(false) 
    return toast({title:'Changes Will Take Effect In 5 Seconds' , description:response.data.message, status: 'success',
      duration: 2000,
       isClosable: true,
