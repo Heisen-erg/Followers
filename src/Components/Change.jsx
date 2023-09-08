@@ -18,7 +18,7 @@ const[buttonloader,setbuttonloader]=useState(false)
 useEffect(() => {
   axios.get("https://rishi-server.vercel.app/getallusers").then(
     ({data})=>{
-    console.log(data)
+    console.log(data.allusers.Rishi)
       setuserdata(data.allusers) 
       setloader(false)
     }
