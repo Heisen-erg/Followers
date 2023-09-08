@@ -12,7 +12,7 @@ const [pass,setpass] = useState({});
  const HandleSubmit = async (e) => {
   e.preventDefault();
   const{Rishi,conRishi}=pass
-console.log(pass)
+
  if (!(Rishi === conRishi)){ 
   return toast({
     title: 'Matching Error',
@@ -24,6 +24,7 @@ console.log(pass)
   }) }
 
 else if(Rishi === conRishi){
+  
   // https://rishi-server.vercel.app/user/register
  await axios.post("https://rishi-server.vercel.app/user/register",pass).then(({data})=>{toast({
   title: 'Success',
