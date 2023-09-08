@@ -4,30 +4,31 @@ import axios from 'axios'
 import { useToast } from "@chakra-ui/react"
 import Contact from './Contact'
 import Usertable from './Usertable'
+import Smallloader from "./Smallloader"
 const Change = () => {
 const toast = useToast()
 
 const[user,setuser]=useState({})
 const[user2,setuser2]=useState()
-// const[loader,setloader]=useState(true)
+const[loader,setloader]=useState(true)
 const[userdata,setuserdata]=useState({})
 const[buttonloader,setbuttonloader]=useState(false)
 
 
-// useEffect(() => {
-//   axios.get("https://rishi-server.vercel.app/user/getallusers").then(
-//     ({data})=>{
-//     console.log(data)
-//       setuserdata(data.allusers) 
-//       // setloader(false)
-//     }
-//   )
+useEffect(() => {
+  axios.get("https://rishi-server.vercel.app/getallusers").then(
+    ({data})=>{
+    console.log(data)
+      setuserdata(data.allusers) 
+      setloader(false)
+    }
+  )
   
 
-//   return () => {
+  return () => {
    
-//   }
-// }, [])
+  }
+}, [])
 
 useEffect(()=>{
 
@@ -122,15 +123,7 @@ const HandleSubmit2 = async (e)=>{
             <h6 className='mt-5 ' >PLAN-NAME</h6>
             <input type="text" id='Value4' style={{ color: 'black', width: '70%', border: '1px solid blue', borderRadius: '5px', backgroundColor: 'rgb(200,200,200.5)',height:'50px' }} onChange={(e)=>{setuser2(e.target.value)} }/>
            
-            {/* { buttonloader?    <> <div className=' d-grid  container-fluid ' style={{
-    height: '100vh',
-    width: '100vw',
-    backgroundcolor: 'rgb(255,255,255,0.5',
-    zIndex:'5'
-}}>
-   <div className='loader'><img className=' img' src={require("../assets/loader.png")} alt="" /></div> 
-    </div>
-    </> :  <button className='mt-3  butt ' disabled={buttonloader} >SUBMIT </button> } */}
+           
     <button className='mt-3  butt '>SUBMIT </button>      
           </form></div>
 
@@ -139,7 +132,7 @@ const HandleSubmit2 = async (e)=>{
 
    
 
-{/* {loader?  <Contact/> :  userdata.map((data)=>{return <Usertable userrishi={data.Username} />})  } */}
+{loader?  <Smallloader/> :  userdata.map((data)=>{return <Usertable userrishi={data.Rishi} />})  }
 
 
        

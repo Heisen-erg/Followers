@@ -2,35 +2,39 @@ import React, { useState } from 'react'
 import "../styles/register.css"
 import { useToast } from '@chakra-ui/react';
 import axios1 from "axios"
+import Contact from './Contact';
 
 const Register = () => {
 
 const [pass,setpass] = useState({});
-
+const[loader,setloader] = useState(false)
  const toast = useToast()
 
  const HandleSubmits = async (e) => {
   e.preventDefault();
   const{Rishi,conRishi}=pass
 
-//  if (!(Rishi === conRishi)){ 
-//   return toast({
-//     title: 'Matching Error',
-//     description: "Username does not match",
-//     status: 'error',
-//     duration: 2000,
-//     isClosable: true,
-//     position:'top'
-//   }) }
+ if (!(Rishi === conRishi)){ 
+  return toast({
+    title: 'Matching Error',
+    description: "Username does not match",
+    status: 'error',
+    duration: 2000,
+    isClosable: true,
+    position:'top'
+  }) }
 
-// else if(Rishi === conRishi){
-  
-  // https://rishi-server.vercel.app/user/register
- console.log(pass)
+else if(Rishi === conRishi){
+  setloader(true)
+ 
+
 
  axios1.post("https://rishi-server.vercel.app/registering",pass
     
- ).then(({data})=>{toast({
+ ).then(({data})=>{ 
+  conRishi({})
+  setloader(false)
+   toast({
   title: 'Success',
   description:data.message,
   status: 'success',
@@ -40,15 +44,16 @@ const [pass,setpass] = useState({});
 })
 // document.getElementById('Value5').value=""
 // document.getElementById('Value6').value=""
+
 }).catch((error)=>{console.log(error)})
 
-// }
+}
  }
 
 
   
 
-  return (
+  return ( loader? <Contact/> :
     <div className="container-fluid">
       <div className="row d-grid tt">
         <div className="col-12 form "><p className='mt-2 text-center'>Fill In The Username In which You Want To Increase Your Followers </p>
