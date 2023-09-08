@@ -4,17 +4,17 @@ import Drawer1 from "./Components/Drawer1"
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
 import Contact from "./Components/Contact"
-import Adminpass from "./Components/Adminpass"
+
 
 import Footer from "./Components/Footer";
 import { Suspense} from "react"; 
-// ,useState,useEffect
-import Pricing from "./Components/Pricing"
+
+
  
-const Home = React.lazy(()=> import("./Components/Home"));
+ import Home from "./Components/Home"
 const Register = React.lazy(()=> import("./Components/Register"));
-
-
+const Pricing = React.lazy(()=>import("./Components/Pricing"))
+const Adminpass = React.lazy(()=>import("./Components/Adminpass"))
 
 function App() {
 
