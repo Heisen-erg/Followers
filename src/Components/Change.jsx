@@ -34,7 +34,7 @@ useEffect(()=>{
 
   window.scrollTo({top: 30, left: 0, behavior: 'smooth'});
 
-},[buttonloader,buttonloader2])
+},[buttonloader])
 
 
 const HandleSubmit = async (e)=>{
