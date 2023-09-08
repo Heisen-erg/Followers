@@ -23,7 +23,7 @@ else{
 
   return (<>{
    juicy ? (<Change/>) :
-   ( <div className='d-grid' style={{height:'50vh'}}>
+   ( <div className='d-grid' style={{height:'70vh'}}>
    <p style={{placeSelf:'center',color:'grey',fontFamily:'verdana',fontSize:'2vmax'}}>PASSWORD</p> <input type="text" style={{placeSelf:'center',width:'250px',height:'50px',border:'3px solid black'}}  id='pass' placeholder='   Password' />
     <button className='btn bg-primary' onClick={Check} style={{placeSelf:'center'}} >submit</button>
     </div>) 
