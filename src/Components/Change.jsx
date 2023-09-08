@@ -45,9 +45,9 @@ await axios.post("https://rishi-server.vercel.app/plans/addplans",user).then((re
         isClosable: true,
         position:'top'
       })
-      document.getElementById('Value1').value = ""
-      document.getElementById('Value2').value = ""
-      document.getElementById('Value3').value = ""
+      // document.getElementById('Value1').value = ""
+      // document.getElementById('Value2').value = ""
+      // document.getElementById('Value3').value = ""
       setbuttonloader(false)
     })}
     
