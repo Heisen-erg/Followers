@@ -131,7 +131,7 @@ const HandleSubmit2 = async (e)=>{
     </div>
 
    
-
+<h1 className='text-center' style={{marginTop:'15px',marginBottom:'15px'}} >USERS</h1>
 {loader?  <Smallloader/> :  userdata.map((data)=>{return <Usertable userrishi={data.Rishi} />})  }
 
 
