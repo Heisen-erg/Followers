@@ -19,7 +19,7 @@ useEffect(() => {
   axios.get("https://rishi-server.vercel.app/getallusers").then(
     ({data})=>{
     console.log(data)
-      setuserdata(data.allusers) 
+      setuserdata(data) 
       setloader(false)
     }
   )
