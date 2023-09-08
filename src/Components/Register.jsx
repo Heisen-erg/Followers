@@ -24,8 +24,8 @@ console.log(pass)
   }) }
 
 else if(Rishi === conRishi){
-
- await axios.post("https://rishi-server.vercel.app/user/register",Rishi).then(({data})=>{toast({
+  // https://rishi-server.vercel.app/user/register
+ await axios.post(" https://rishi-server.vercel.app/user/register",pass).then(({data})=>{toast({
   title: 'Success',
   description:data.message,
   status: 'success',
