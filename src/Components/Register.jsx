@@ -30,7 +30,7 @@ else if(Rishi === conRishi){
 
 
  axios1.post("https://rishi-server.vercel.app/registering",pass).then(({data})=>{ 
-  conRishi({})
+  setpass({})
   setloader(false)
   return toast({
   title: 'Success',
