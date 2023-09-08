@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import "../styles/register.css"
 import { useToast } from '@chakra-ui/react';
-import axios from "axios"
+import axios1 from "axios"
 
 const Register = () => {
 
@@ -27,7 +27,8 @@ const [pass,setpass] = useState({});
   
   // https://rishi-server.vercel.app/user/register
  console.log("ho rha h")
- await axios.post("https://rishi-server.vercel.app/registering",pass
+
+ await axios1.post("https://rishi-server.vercel.app/registering",pass
 ).then(({data})=>{toast({
   title: 'Success',
   description:data.message,
