@@ -29,6 +29,13 @@ const[buttonloader2,setbuttonloader2]=useState(false)
 //   }
 // }, [])
 
+useEffect(()=>{
+
+
+  window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
+
+},[buttonloader,buttonloader2])
+
 
 const HandleSubmit = async (e)=>{
   e.preventDefault()
