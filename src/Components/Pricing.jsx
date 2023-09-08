@@ -21,7 +21,7 @@ useEffect(() => {
 
   return (<div  style={{marginBottom:'50vh'}}>
     <div>
-        <h1 className='text-center price'> PLANS </h1>
+        <h1 className='text-center price' style={{fontFamily:'cursive'}} > PLANS </h1>
     </div>
 
     <table style={{marginTop:'7vh',fontFamily:'cursive',fontSize:'2vmax',color:'rgb(107, 43, 43)'}}>

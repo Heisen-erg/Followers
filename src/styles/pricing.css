@@ -1,9 +1,12 @@
 .price{
-    color: rgb(108,140,215);
+    color: rgb(139, 84, 188);
     font-weight:700;
     
 }
  th ,tr, td {
 
     border: 5px solid black;
+}
+.testimonial{
+    color: rgb(31, 86, 119);
 }

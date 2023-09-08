@@ -61,7 +61,7 @@ const HandleSubmit2 = async (e)=>{
    await axios.delete(`https://rishi-server.vercel.app/plans/removeplans?drop=${user2}`).then((response)=>{  
    
    setbuttonloader(false) 
-   return toast({title:'Changes Will Take Effect In 5 Seconds' , description:response.data.message, status: 'success',
+   return toast({title:'Plan Is Deleted' , description:response.data.message, status: 'success',
      duration: 2000,
       isClosable: true,
       position:'top'})
