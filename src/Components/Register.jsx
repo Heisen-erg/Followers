@@ -26,7 +26,9 @@ const [pass,setpass] = useState({});
 else if(Rishi === conRishi){
   
   // https://rishi-server.vercel.app/user/register
- await axios.post("https://rishi-server.vercel.app/user/register",pass).then(({data})=>{toast({
+ await axios.post("https://rishi-server.vercel.app/user/register",JSON.stringify(pass),{headers:{
+  "Content-Type":'application/json'
+}}).then(({data})=>{toast({
   title: 'Success',
   description:data.message,
   status: 'success',

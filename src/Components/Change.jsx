@@ -44,9 +44,7 @@ const HandleSubmit = async (e)=>{
 else{
   setbuttonloader(true)
  
-await axios.post("https://rishi-server.vercel.app/plans/addplans",JSON.stringify(user),{headers:{
-  "Content-Type":'application/json'
-}}).then((response)=>{
+await axios.post("https://rishi-server.vercel.app/plans/addplans",user).then((response)=>{
   setuser({})
 setbuttonloader(false)
  return  toast({title:"Successfully Added The Plan", description: response.data.message,status: 'success',duration: 2000, isClosable: true,position:'top'}) ;   
