@@ -9,7 +9,7 @@ const [pass,setpass] = useState({});
 
  const toast = useToast()
 
- const HandleSubmit5 =  (e) => {
+ const HandleSubmits =  (e) => {
   e.preventDefault();
   const{Rishi,conRishi}=pass
 
@@ -56,7 +56,7 @@ const [pass,setpass] = useState({});
             <input type="text" style={{ color: 'black', width: '70%', border: '1px solid blue', borderRadius: '5px', backgroundColor: 'rgb(200,200,200.5)',height:'50px' }} id='Value5' onChange={(e)=>{setpass({...pass,Rishi:e.target.value}) }}/>
             <h6 className='mt-5 ' >CONFIRM USERNAME</h6>
             <input type="text" style={{ color: 'black', width: '70%', border: '1px solid blue', borderRadius: '5px', backgroundColor: 'rgb(200,200,200.5)',height:'50px' }} id='Value6' onChange={(e)=>{setpass({...pass,conRishi:e.target.value})}} />
-            <button className='mt-5  butt ' onSubmit={HandleSubmit5} >SUBMIT</button>
+            <button className='mt-5  butt ' onSubmit={HandleSubmits} >SUBMIT</button>
           </form></div>
 
       </div>
