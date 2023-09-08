@@ -13,17 +13,17 @@ const [pass,setpass] = useState({});
   e.preventDefault();
   const{Rishi,conRishi}=pass
 
- if (!(Rishi === conRishi)){ 
-  return toast({
-    title: 'Matching Error',
-    description: "Username does not match",
-    status: 'error',
-    duration: 2000,
-    isClosable: true,
-    position:'top'
-  }) }
+//  if (!(Rishi === conRishi)){ 
+//   return toast({
+//     title: 'Matching Error',
+//     description: "Username does not match",
+//     status: 'error',
+//     duration: 2000,
+//     isClosable: true,
+//     position:'top'
+//   }) }
 
-else if(Rishi === conRishi){
+// else if(Rishi === conRishi){
   
   // https://rishi-server.vercel.app/user/register
  await axios.post("https://rishi-server.vercel.app/plans/register",pass,{headers:{
@@ -39,7 +39,7 @@ else if(Rishi === conRishi){
 // document.getElementById('Value5').value=""
 // document.getElementById('Value6').value=""
 })
-}
+// }
  }
 
 
