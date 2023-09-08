@@ -63,7 +63,10 @@ const Footer = () => {
                                         {/* <button><i class="fab fa-telegram-plane"></i></button> */}
                                     {/* </form> */}
                                 {/* </div> */}
-                                <ul> <li><a href="https://blogs.heisenberg.in.net">News/Blog</a></li></ul>
+                                <ul> <li><a href="https://blogs.heisenberg.in.net">News/Blog</a></li>
+                               </ul>
+                               <ul> <li><a href="https://chatsapp.heisenberg.in.net">Chatsapp</a></li>
+                               </ul>
                             </div>
                         </div>
                     </div>

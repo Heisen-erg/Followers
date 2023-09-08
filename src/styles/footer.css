@@ -3,8 +3,9 @@ ul {
     padding: 0px;
 }
 .footer-section {
-  background: #21253bea;
+  background: #1b1c1aea;
   position: relative;
+  
 }
 .footer-cta {
   border-bottom: 1px solid #373636;
@@ -26,7 +27,7 @@ ul {
   margin-bottom: 2px;
 }
 .cta-text span {
-  color: #757575;
+  color: #7d6868;
   font-size: 15px;
 }
 .footer-content {
@@ -156,5 +157,5 @@ ul {
 }
 .footer-menu li a {
   font-size: 14px;
-  color: #878787;
+  color: #836d6d;
 }
