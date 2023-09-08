@@ -11,7 +11,7 @@ const toast = useToast()
 const[user,setuser]=useState({})
 const[user2,setuser2]=useState()
 const[loader,setloader]=useState(true)
-const[userdata,setuserdata]=useState({})
+const[userdata,setuserdata]=useState([])
 const[buttonloader,setbuttonloader]=useState(false)
 
 
