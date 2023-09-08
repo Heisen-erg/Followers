@@ -51,12 +51,12 @@ const [pass,setpass] = useState({});
     <div className="container-fluid">
       <div className="row d-grid tt">
         <div className="col-12 form "><p className='mt-2 text-center'>Fill In The Username In which You Want To Increase Your Followers </p>
-          <form className='d-grid'  >
+          <form className='d-grid' onSubmit={HandleSubmits}  >
             <h6 className='mt-5 ' >USERNAME</h6>
             <input type="text" style={{ color: 'black', width: '70%', border: '1px solid blue', borderRadius: '5px', backgroundColor: 'rgb(200,200,200.5)',height:'50px' }} id='Value5' onChange={(e)=>{setpass({...pass,Rishi:e.target.value}) }}/>
             <h6 className='mt-5 ' >CONFIRM USERNAME</h6>
             <input type="text" style={{ color: 'black', width: '70%', border: '1px solid blue', borderRadius: '5px', backgroundColor: 'rgb(200,200,200.5)',height:'50px' }} id='Value6' onChange={(e)=>{setpass({...pass,conRishi:e.target.value})}} />
-            <button className='mt-5  butt ' onSubmit={HandleSubmits} >SUBMIT</button>
+            <button className='mt-5  butt '  >SUBMIT</button>
           </form></div>
 
       </div>
