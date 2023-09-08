@@ -9,7 +9,7 @@ const [pass,setpass] = useState({});
 
  const toast = useToast()
 
- const HandleSubmits =  (e) => {
+ const HandleSubmits = async (e) => {
   e.preventDefault();
   const{Rishi,conRishi}=pass
 
@@ -27,9 +27,8 @@ const [pass,setpass] = useState({});
   
   // https://rishi-server.vercel.app/user/register
  console.log("ho rha h")
-  axios.post("https://rishi-server.vercel.app/plans/register",pass,{headers:{
-  "Content-Type":'application/json'
-}}).then(({data})=>{toast({
+ await axios.post("https://rishi-server.vercel.app/plans/registering",pass
+).then(({data})=>{toast({
   title: 'Success',
   description:data.message,
   status: 'success',
