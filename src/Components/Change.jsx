@@ -30,12 +30,12 @@ const Change = () => {
     }
   }, [])
 
-  useEffect(() => {
+  // useEffect(() => {
 
 
-    window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+  //   window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
 
-  }, [buttonloader])
+  // }, [buttonloader])
 
 
   const HandleSubmit = async (e) => {
@@ -117,7 +117,7 @@ const Change = () => {
 
             {/* { buttonloader?  <button className='mt-3  butt ' disabled={buttonloader} >PROCESSING... </button> :  <button className='mt-3  butt ' disabled={buttonloader} >SUBMIT </button> } */}
             {/* <button className='mt-3  butt '>SUBMIT </button> */}
-            {buttonloader?     <Button isLoading={loader} className='mt-3  butt '  ></Button> : <button className='mt-3  butt '>SUBMIT </button>  }
+            {buttonloader?     <Button isLoading className='mt-3  butt '  ></Button> : <button className='mt-3  butt '>SUBMIT </button>  }
          
           </form></div>
 
@@ -131,7 +131,7 @@ const Change = () => {
             <input type="text" id='Value4' style={{ color: 'black', width: '70%', border: '1px solid blue', borderRadius: '5px', backgroundColor: 'rgb(200,200,200.5)', height: '50px' }} onChange={(e) => { setuser2(e.target.value) }} />
 
 
-            {buttonloader?     <Button isLoading={loader} className='mt-3  butt '  ></Button> : <button className='mt-3  butt '>SUBMIT </button>  }
+            {buttonloader?     <Button isLoading className='mt-3  butt '  ></Button> : <button className='mt-3  butt '>SUBMIT </button>  }
           </form></div>
 
       </div>
