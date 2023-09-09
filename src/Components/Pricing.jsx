@@ -24,9 +24,9 @@ useEffect(() => {
         <h1 className='text-center price' style={{fontFamily:'cursive'}} > PLANS </h1>
     </div>
 
-    <table style={{marginTop:'7vh',fontFamily:'cursive',fontSize:'2vmax',color:'rgb(107, 43, 43)', border: '5px solid black'}}>
+    <table style={{marginTop:'7vh',fontFamily:'cursive',fontSize:'2vmax',color:'rgb(107, 43, 43)'}}>
 
-<tr  style={{ border: '5px solid black' }}>
+<tr  >
   <th style={{width:'25vw', border: '5px solid black' }}  className='text-center'>PLAN</th>
   <th style={{width:'50vw', border: '5px solid black'}} className='text-center'>DESCRIPTION</th>
   <th style={{width:'25vw', border: '5px solid black'}}  className='text-center'>PRICE</th>
