@@ -1,7 +1,7 @@
 .butt {
     border-radius: 5px;
     height: 5vh;
-    width: 15vw;
+    /* width: 15vw; */
     background-color: rgb(62, 58, 55);
     font-size: 12px;
     color: antiquewhite;
