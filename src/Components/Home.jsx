@@ -12,7 +12,7 @@ const Home = () => {
 const[loader,setloader]=useState(true)
 
  useEffect(() => {
-   setTimeout(()=>{setloader(false)},1500)
+   fetch("https://firebasestorage.googleapis.com/v0/b/yoyo-api-6988.appspot.com/o/inst.jpg?alt=media&token=0395f3b8-8930-4300-8b6e-688ebc20a5a6").then(()=>{setloader(false)})
  
    return () => {
      
