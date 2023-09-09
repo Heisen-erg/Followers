@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import "../styles/register.css"
 import axios from 'axios'
-import { useToast } from "@chakra-ui/react"
+import { useToast,Button } from "@chakra-ui/react"
 import Contact from './Contact'
 import Usertable from './Usertable'
 import Smallloader from "./Smallloader"
@@ -47,6 +47,9 @@ else{
  
 await axios.post("https://rishi-server.vercel.app/plans/addplans",user).then((response)=>{
   setuser({})
+  document.getElementById("Value1").value="";
+  document.getElementById("Value2").value="";
+  document.getElementById("Value3").value="";
 setbuttonloader(false)
  return  toast({title:"Successfully Added The Plan", description: response.data.message,status: 'success',duration: 2000, isClosable: true,position:'top'}) ;   
      
@@ -94,7 +97,7 @@ const HandleSubmit2 = async (e)=>{
 
 
 
-  return (buttonloader?  ( <Contact/>) :  <> <div style={{height:'10vh',marginTop:'5vh'}}>
+  return ( <> <div style={{height:'10vh',marginTop:'5vh'}}>
 <h1 style={{fontFamily:'dancing',fontSize:'35px',color:'grey'}} className='text-center'>WELCOME ADMIN RISHI SHUKLA !</h1>
 </div>
 
@@ -110,7 +113,16 @@ const HandleSubmit2 = async (e)=>{
             <input type="text" id='Value3' style={{ color: 'black', width: '70%', border: '1px solid blue', borderRadius: '5px', backgroundColor: 'rgb(200,200,200.5)',height:'50px' }} onChange={(e)=>{setuser({...user,planprice:e.target.value})}} />
         
             {/* { buttonloader?  <button className='mt-3  butt ' disabled={buttonloader} >PROCESSING... </button> :  <button className='mt-3  butt ' disabled={buttonloader} >SUBMIT </button> } */}
-            <button className='mt-3  butt '>SUBMIT </button>
+            {/* <button className='mt-3  butt '>SUBMIT </button> */}
+            <Button
+            className='mt-3  butt '
+            isLoading={buttonloader}
+    loadingText='Submit'
+    colorScheme='teal'
+    variant='outline'
+  >
+    Submit
+  </Button>
          
           </form></div>
 
