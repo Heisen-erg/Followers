@@ -117,15 +117,7 @@ const Change = () => {
 
             {/* { buttonloader?  <button className='mt-3  butt ' disabled={buttonloader} >PROCESSING... </button> :  <button className='mt-3  butt ' disabled={buttonloader} >SUBMIT </button> } */}
             {/* <button className='mt-3  butt '>SUBMIT </button> */}
-            {buttonloader? <Button
-              className='mt-3  butt '
-
-              variant='solid'
-              colorScheme='teal'
-
-            >
-              Submit
-            </Button> :   <Button isLoading colorScheme='teal' variant='solid'></Button>   }
+            {buttonloader?  <button className='mt-3  butt '>SUBMIT </button> :   <Button isLoading className='mt-3  butt '  ></Button>   }
          
           </form></div>
 
