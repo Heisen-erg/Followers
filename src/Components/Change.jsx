@@ -30,12 +30,12 @@ useEffect(() => {
   }
 }, [])
 
-// useEffect(()=>{
+useEffect(()=>{
 
 
-//   window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
+  window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
 
-// },[buttonloader])
+},[buttonloader])
 
 
 const HandleSubmit = async (e)=>{
@@ -94,11 +94,11 @@ const HandleSubmit2 = async (e)=>{
 
 
 
-  return (  <> <div style={{height:'10vh',marginTop:'5vh'}}>
+  return (buttonloader?  ( <Contact/>) :  <> <div style={{height:'10vh',marginTop:'5vh'}}>
 <h1 style={{fontFamily:'dancing',fontSize:'35px',color:'grey'}} className='text-center'>WELCOME ADMIN RISHI SHUKLA !</h1>
 </div>
 
-{buttonloader?  ( <Smallloader/>) : <div className="container-fluid" style={{marginTop:'15vh'}}>
+ <div className="container-fluid" style={{marginTop:'15vh'}}>
       <div className="row d-grid tt">
         <div className="col-12 form "><p className='mt-2 text-center'>Fill In The Details of Plan That You Want To Add In Pricing Section</p>
           <form className='d-grid' onSubmit={HandleSubmit} >
@@ -115,8 +115,7 @@ const HandleSubmit2 = async (e)=>{
           </form></div>
 
       </div> 
-    </div>}
-   {buttonloader?  ( <Smallloader/>) : 
+    </div> 
     <div className="container-fluid">
       <div className="row d-grid tt">
         <div className="col-12 form "><p className='mt-2 text-center'>Fill In The Name of the Plan That You Want To Delete</p>
@@ -129,7 +128,7 @@ const HandleSubmit2 = async (e)=>{
           </form></div>
 
       </div>
-    </div>}
+    </div>
 
    
 <h1 className='text-center' style={{marginTop:'15px',marginBottom:'15px'}} >USERS</h1>
