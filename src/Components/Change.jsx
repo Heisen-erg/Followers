@@ -63,7 +63,7 @@ const Change = () => {
     e.preventDefault()
     setbuttonloader(true)
     await axios.delete(`https://rishi-server.vercel.app/plans/removeplans?drop=${user2}`).then((response) => {
-
+      document.getElementById("Value4").value = "";
       setbuttonloader(false)
       return toast({
         title: 'Plan Is Deleted', description: response.data.message, status: 'success',
@@ -117,7 +117,7 @@ const Change = () => {
 
             {/* { buttonloader?  <button className='mt-3  butt ' disabled={buttonloader} >PROCESSING... </button> :  <button className='mt-3  butt ' disabled={buttonloader} >SUBMIT </button> } */}
             {/* <button className='mt-3  butt '>SUBMIT </button> */}
-            {buttonloader?  <button className='mt-3  butt '>SUBMIT </button> :   <Button isLoading={loader} className='mt-3  butt '  ></Button>   }
+            {buttonloader?     <Button isLoading={loader} className='mt-3  butt '  ></Button> : <button className='mt-3  butt '>SUBMIT </button>  }
          
           </form></div>
 
@@ -131,7 +131,7 @@ const Change = () => {
             <input type="text" id='Value4' style={{ color: 'black', width: '70%', border: '1px solid blue', borderRadius: '5px', backgroundColor: 'rgb(200,200,200.5)', height: '50px' }} onChange={(e) => { setuser2(e.target.value) }} />
 
 
-            <button className='mt-3  butt '>SUBMIT </button>
+            {buttonloader?     <Button isLoading={loader} className='mt-3  butt '  ></Button> : <button className='mt-3  butt '>SUBMIT </button>  }
           </form></div>
 
       </div>
