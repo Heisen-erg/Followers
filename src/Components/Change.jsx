@@ -119,7 +119,7 @@ const HandleSubmit2 = async (e)=>{
             isLoading={buttonloader}
     loadingText='Submit'
     colorScheme='teal'
-    variant='outline'
+   
   >
     Submit
   </Button>
